@@ -20,6 +20,7 @@ For more information see the client and server repos.
   * MongoDB database exposed at `localhost:27017`
 * `npm stop` to stop and remove all containers and volumes.
 * `npm test` to run a full integration test.
+* `npm run coverage` to check coverage for unit tests.
 
 ## Project Goal
 
