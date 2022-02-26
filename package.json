@@ -6,9 +6,21 @@
   "scripts": {
     "start": "docker compose -f docker-compose.yaml -f docker-compose.dev.yaml up",
     "test": "docker compose -f docker-compose.yaml -f docker-compose.test.yaml up -d && docker exec -it test_api sh -c \"npm i && npm test\"",
-    "stop": "docker compose down --volumes --remove-orphans"
+    "stop": "docker compose down --volumes --remove-orphans",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/integration/"
+    ]
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
 }
